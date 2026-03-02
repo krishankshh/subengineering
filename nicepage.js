@@ -116,3 +116,60 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
         document.body.style.overflow = 'hidden';
     });
 })();
+
+
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        var overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100vw';
+        overlay.style.height = '100vh';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+        overlay.style.color = 'white';
+        overlay.style.zIndex = '999999';
+        overlay.style.display = 'flex';
+        overlay.style.flexDirection = 'column';
+        overlay.style.justifyContent = 'center';
+        overlay.style.alignItems = 'center';
+        overlay.style.textAlign = 'center';
+        overlay.style.fontFamily = 'Montserrat, Arial, sans-serif';
+        overlay.style.padding = '20px';
+        overlay.style.boxSizing = 'border-box';
+
+        var message = document.createElement('h1');
+        message.innerText = 'Service Notice';
+        message.style.fontSize = '3rem';
+        message.style.marginBottom = '20px';
+
+        var subMessage = document.createElement('p');
+        subMessage.innerText = 'This version of the website is no longer supported. Please contact Krishank Shah at kmats.in for account reconciliation and to discuss your any pending web hosting and new web development project.';
+        subMessage.style.fontSize = '1.5rem';
+        subMessage.style.marginBottom = '40px';
+        subMessage.style.lineHeight = '1.5';
+
+        var link = document.createElement('a');
+        link.href = 'https://kmats.in/';
+        link.target = '_blank';
+        link.style.display = 'inline-block';
+        link.style.cursor = 'pointer';
+
+        var logo = document.createElement('img');
+        logo.src = 'images/fullname.png';
+        logo.alt = 'KMATS Logo';
+        logo.style.maxWidth = '300px';
+        logo.style.height = 'auto';
+        logo.style.background = 'white';
+        logo.style.padding = '10px';
+        logo.style.borderRadius = '10px';
+
+        link.appendChild(logo);
+        overlay.appendChild(message);
+        overlay.appendChild(subMessage);
+        overlay.appendChild(link);
+
+        document.body.appendChild(overlay);
+        document.body.style.overflow = 'hidden';
+    });
+})();
